@@ -1,0 +1,379 @@
+/* titles */
+.co-title {
+  color: $color-text-primary;
+}
+
+.co-title--h2 {
+  font-size: $font-size-h2;
+}
+
+/* buttons */
+.co-button {
+  font-size: 1rem;
+
+  &[type="submit"],
+  &[name="commit"],
+  &[data-method="delete"],
+  &.co-button--small {
+	  -webkit-border-radius: 7px;
+	          border-radius: 7px;
+	  padding: 10px 15px;
+	  color: #fff;
+	  font-weight: 700;
+	  font-size: 14px;
+	  background-color:#00A99D;
+	  &:hover {
+		background-color:#00837A;
+	  }
+  }
+
+  &#get_pdf_receipt,
+  &#use_max_bonus_points {
+    @include button-variant($gray-light, $color-link-primary-hover);
+  }
+
+  &.co-button--small {
+    padding: -webkit-calc(0.25rem + 1px) 0.75rem;
+    padding: calc(0.25rem + 1px) 0.75rem;
+    white-space: initial;
+  }
+}
+
+.co-button--link,
+.co-button--password_recover {
+  @include link-decor($color-link-primary, $color-link-primary-hover);
+}
+
+.co-modal-button {
+  @extend .button;
+}
+
+/* links */
+.co-link,
+.link {
+  @include link-decor($color-link-primary, $color-link-primary-hover);
+}
+
+/* input */
+
+.co-input-field,
+.co-input--file .co-input-wrapper {
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  &:focus {
+	outline: 1px solid #00a99d;
+    -webkit-box-shadow: 0px 0px 5px 0 #00a99d;
+            box-shadow: 0px 0px 5px 0 #00a99d;
+  }
+}
+
+.co-input-select {
+  background-color: transparent;
+}
+
+.co-toggable_field-input {
+  color: $color-link-primary;
+
+  span {
+    -webkit-border-radius: 50% !important;
+            border-radius: 50% !important;
+
+    &:after {
+      color: #fff !important;
+    }
+  }
+}
+
+.co-input-description {
+  color: $color-text-primary;
+
+  a {
+    @include link-decor;
+  }
+}
+
+.co-bonus_points-maximum_points {
+  color: $color-text-primary;
+}
+
+.co-bonus_points-submit {
+  -ms-flex-item-align: stretch;
+  -webkit-align-self: stretch;
+          align-self: stretch;
+}
+
+/* tabs */
+
+.co-tabs-controls {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 260px;
+  -webkit-flex: 1 0 260px;
+     -moz-box-flex: 1;
+          flex: 1 0 260px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+}
+
+.co-tabs-node {
+  @extend .button;
+  @include button-variant($gray-light, $color-link-primary-hover);
+
+  margin: 0 0.25rem;
+  -webkit-border-radius: 0 !important;
+          border-radius: 0 !important;
+
+  &--active {
+    background-color: $color-link-primary-hover;
+    color: edit-color($color-link-primary-hover);
+  }
+}
+
+/* prices */
+.co-price {
+  font-size: 1rem;
+}
+
+/* basket */
+.co-basket {
+    max-width: 100%;
+}
+
+.co-basket_subtotal {
+  margin-bottom: 0.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.co-basket_total-price {
+  font-size: $font-size-medium;
+}
+
+/* forms */
+.co-delivery_adress-form {
+  margin-left: -0.25rem;
+  margin-right: -0.25rem;
+
+  .co-input {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+}
+
+/* modals */
+.co-modal {
+  background-color: $color-background-primary;
+  border: 1px solid $color-border-primary;
+}
+
+.co-modal-close {
+  @include link-decor;
+}
+
+.js-modal-toggler {
+  @include link-decor;
+}
+
+/** order */
+.co-order-state {
+  -webkit-border-radius: 0;
+          border-radius: 0;
+}
+
+.co-section--checkout_order {
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+/* Доп. стили */
+	// Список товара
+		.co-sidebar-wrapper {
+			margin: 10px;
+		}
+		
+		.co-checkout-block--padded {
+			padding:0;
+		}
+
+		.co-sidebar {
+		  -webkit-box-shadow: none;
+		          box-shadow: none;
+		  width: 100%;
+		  position: inherit;
+		  border:1px solid #f1f0f0;
+		  overflow: inherit!important;
+		}
+
+		.co-basket_header-list {
+			background: #fafafa;
+			border-bottom: 1px solid #f1f0f0;
+			padding: 10px 0;
+			color:#403f3e;
+			font-weight:700;
+			.co-basket_header {
+				margin-bottom: 1rem;
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: -moz-box;
+				display: flex;
+				-webkit-box-flex: 0;
+				-ms-flex: 0 1 auto;
+				-webkit-flex: 0 1 auto;
+				   -moz-box-flex: 0;
+				        flex: 0 1 auto;
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: normal;
+				-ms-flex-direction: row;
+				-webkit-flex-direction: row;
+				   -moz-box-orient: horizontal;
+				   -moz-box-direction: normal;
+				        flex-direction: row;
+				-ms-flex-wrap: wrap;
+				-webkit-flex-wrap: wrap;
+				        flex-wrap: wrap;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				-webkit-align-items: center;
+				   -moz-box-align: center;
+				        align-items: center;
+				margin-bottom: 0;
+				.co-basket_header-image_container {
+					-webkit-box-flex: 0;
+					-ms-flex: 0 1 100px;
+					-webkit-flex: 0 1 100px;
+					   -moz-box-flex: 0;
+					        flex: 0 1 100px;
+				}
+				.co-basket_basket_header-description {
+					-webkit-box-flex: 1;
+					-ms-flex: 1 1 180px;
+					-webkit-flex: 1 1 180px;
+					   -moz-box-flex: 1;
+					        flex: 1 1 180px;
+					padding: 0 1rem;
+					word-wrap: break-word;
+					word-break: keep-all;
+				}
+				.co-basket_header-count {
+					width: 100px;
+					text-align: center;
+				}
+				.co-basket_header-total {
+					width: 150px;
+					text-align: center;
+				}
+			}
+		}
+		
+		.co-basket_item-count {
+			text-align: center;
+			width: 100px;
+		}
+		
+		.co-basket_item-total {
+			width: 150px;
+			text-align: center;
+		}
+		
+		.co-basket_subtotal-list {
+			padding: 10px;
+		}
+		
+		.co-basket_total {
+			padding: 0 10px 10px 10px;
+		}
+	
+	// Форма заказа
+		.co-checkout-order_form {
+			border:5px solid #f1f0f0;
+			margin:20px 80px;
+			padding: 20px;
+		}
+		
+		.co-form-title {
+			background:#f5f5f5;
+			border-bottom:2px solid #e1e1e1;
+			font-size: 20px;
+			font-weight: 700;
+			padding: 10px 20px;
+			margin: 20px 0 10px 0;
+			color:#000;
+		}
+		
+		.co-input-label {
+			font-size: 14px!important;
+			font-weight: 500!important;
+			float: left;
+			width: 40%;
+			text-align: right;
+			padding: 15px 10px 0 0;
+			&:before {
+				font-size: 0.9em;
+				margin-left: 0.2em;
+				line-height: 0.7em;
+				content: '*';
+				color: red;
+			}
+			&:after {
+				content: '';
+				display:none;
+			}
+		}
+		
+		.co-input--email {
+			.co-input-label {
+				&:before {
+					content: '';
+					display:none;
+				}
+				&:after {
+					content: '';
+					display:none;
+				}
+			}
+		}
+		
+		
+		.co-input-field {
+			width: 60%;
+			float: right;
+		}
+		
+		.co-input-notice {
+			margin-left: 40%;
+			text-align: left;
+		}
+		
+		.delivery_variants {
+			background: #f9f6ef;
+			padding: 10px;
+		}
+		.co-delivery_adress {
+			background: #f9f6ef;
+			padding: 10px;
+		}
+		
+		.co-delivery_method {
+			.loader {
+				display:none;
+			}
+		}
+		
+		.co-block-bg-1 {
+			background: #f9f6ef;
+			padding: 10px;
+			margin: 10px 0 10px 0;
+		}
+		
+		.js-button-checkout_submit {
+			float:right;
+		}
+		
+		.endfix {
+			height: 40px;
+		}
