@@ -8,4 +8,5 @@
 
 ## Сам скрипт и пример на GitHub
 https://github.com/eZ4hUNt/insales-checkout-tpl-1
+
 Пример: http://myshop-mu426.myinsales.ru/
