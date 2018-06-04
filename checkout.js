@@ -17,14 +17,24 @@
 		$('.js-co-contacts').append($('#client_surname').parent());
 		$('.js-co-contacts').append($('#client_email').parent());
 		$('.js-co-contacts').append($('#client_phone').parent());
-		$('.co-input-description').hide();
+		$('[data-target=".co-modal--login"]').hide()
 		
 	// Доставка
 		$('.js-co-delivery').append($('.co-delivery_method-list'));
 		$('#delivery_address').find('.co-title').hide();
 		$('#delivery_variants').find('.co-title').hide();
 		$('#shipping_address').find('.co-title').hide();
-		
+
+		// Вкладки типа доставки
+			$('#delivery-type-switch').hide();
+			$('#delivery_variants').find('.co-tabs-content').show();
+			$('#tabs-need-address').click(function() {
+              $('.co-delivery_adress-form').show();
+            });
+			$('#tabs-pickup').click(function() {
+              $('.co-delivery_adress-form').hide();
+            });
+
 	// Оплата
 		$('.js-co-payment').append('<div class="co-block-bg-1"></div>');
 		$('.js-co-payment').find('.co-block-bg-1').append($('#payment_gateways'));
@@ -33,5 +43,6 @@
 	// Другие поля
 		$('#register').removeAttr("checked");
 		$('.co-customer').hide();
+
 		$('form#order_form').append('<div class="endfix"></div>');
 		$('#shipping_address').hide();
