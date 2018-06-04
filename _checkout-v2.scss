@@ -115,6 +115,11 @@
   display: -webkit-flex;
   display: -moz-box;
   display: flex;
+//  display: none;
+}
+
+.co-tabs-content {
+//	display:block!important;
 }
 
 .co-tabs-node {
@@ -312,16 +317,21 @@
 			width: 40%;
 			text-align: right;
 			padding: 15px 10px 0 0;
-			&:before {
-				font-size: 0.9em;
-				margin-left: 0.2em;
-				line-height: 0.7em;
-				content: '*';
-				color: red;
-			}
 			&:after {
 				content: '';
 				display:none;
+			}
+		}
+
+		.co-input--required {
+			.co-input-label {
+              &:before {
+                  font-size: 0.9em;
+                  margin-left: 0.2em;
+                  line-height: 0.7em;
+                  content: '*';
+                  color: red;
+              }
 			}
 		}
 		
@@ -377,3 +387,14 @@
 		.endfix {
 			height: 40px;
 		}
+		
+		#deliveries-not-available {
+			width: 100%;
+			color: #a94442;
+		}
+		.twitter-typeahead {
+		/*	display: initial!important;*/
+		} 
+
+
+
